@@ -1,0 +1,186 @@
+ARM GAS  /tmp/ccGxnlqD.s 			page 1
+
+
+   1              		.cpu cortex-m7
+   2              		.arch armv7e-m
+   3              		.fpu fpv5-sp-d16
+   4              		.eabi_attribute 27, 1
+   5              		.eabi_attribute 28, 1
+   6              		.eabi_attribute 20, 1
+   7              		.eabi_attribute 21, 1
+   8              		.eabi_attribute 23, 3
+   9              		.eabi_attribute 24, 1
+  10              		.eabi_attribute 25, 1
+  11              		.eabi_attribute 26, 1
+  12              		.eabi_attribute 30, 1
+  13              		.eabi_attribute 34, 1
+  14              		.eabi_attribute 18, 4
+  15              		.file	"task.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.Cocktail_newTask,"ax",%progbits
+  20              		.align	1
+  21              		.global	Cocktail_newTask
+  22              		.syntax unified
+  23              		.thumb
+  24              		.thumb_func
+  26              	Cocktail_newTask:
+  27              	.LVL0:
+  28              	.LFB0:
+  29              		.file 1 "fw-lib-stm32-CocktailOS/core/task.c"
+   1:fw-lib-stm32-CocktailOS/core/task.c **** #include "task.h"
+   2:fw-lib-stm32-CocktailOS/core/task.c **** #include "stdlib.h"
+   3:fw-lib-stm32-CocktailOS/core/task.c **** 
+   4:fw-lib-stm32-CocktailOS/core/task.c **** Cocktail_TaskTypeDef *
+   5:fw-lib-stm32-CocktailOS/core/task.c **** Cocktail_newTask(TASK_Fn task_fn, void *context)
+   6:fw-lib-stm32-CocktailOS/core/task.c **** {
+  30              		.loc 1 6 1 view -0
+  31              		.cfi_startproc
+  32              		@ args = 0, pretend = 0, frame = 0
+  33              		@ frame_needed = 0, uses_anonymous_args = 0
+  34              		.loc 1 6 1 is_stmt 0 view .LVU1
+  35 0000 38B5     		push	{r3, r4, r5, lr}
+  36              	.LCFI0:
+  37              		.cfi_def_cfa_offset 16
+  38              		.cfi_offset 3, -16
+  39              		.cfi_offset 4, -12
+  40              		.cfi_offset 5, -8
+  41              		.cfi_offset 14, -4
+  42 0002 0546     		mov	r5, r0
+  43 0004 0C46     		mov	r4, r1
+   7:fw-lib-stm32-CocktailOS/core/task.c ****     Cocktail_TaskTypeDef *task;
+  44              		.loc 1 7 5 is_stmt 1 view .LVU2
+   8:fw-lib-stm32-CocktailOS/core/task.c **** 
+   9:fw-lib-stm32-CocktailOS/core/task.c ****     task = (Cocktail_TaskTypeDef *)malloc(sizeof(Cocktail_TaskTypeDef));
+  45              		.loc 1 9 5 view .LVU3
+  46              		.loc 1 9 36 is_stmt 0 view .LVU4
+  47 0006 1420     		movs	r0, #20
+  48              	.LVL1:
+  49              		.loc 1 9 36 view .LVU5
+ARM GAS  /tmp/ccGxnlqD.s 			page 2
+
+
+  50 0008 FFF7FEFF 		bl	malloc
+  51              	.LVL2:
+  10:fw-lib-stm32-CocktailOS/core/task.c **** 
+  11:fw-lib-stm32-CocktailOS/core/task.c ****     task->callback = task_fn;
+  52              		.loc 1 11 5 is_stmt 1 view .LVU6
+  53              		.loc 1 11 20 is_stmt 0 view .LVU7
+  54 000c 0560     		str	r5, [r0]
+  12:fw-lib-stm32-CocktailOS/core/task.c ****     task->context  = context;
+  55              		.loc 1 12 5 is_stmt 1 view .LVU8
+  56              		.loc 1 12 20 is_stmt 0 view .LVU9
+  57 000e 4460     		str	r4, [r0, #4]
+  13:fw-lib-stm32-CocktailOS/core/task.c **** 
+  14:fw-lib-stm32-CocktailOS/core/task.c ****     task->_pcb     = NULL;
+  58              		.loc 1 14 5 is_stmt 1 view .LVU10
+  59              		.loc 1 14 20 is_stmt 0 view .LVU11
+  60 0010 0022     		movs	r2, #0
+  61 0012 8260     		str	r2, [r0, #8]
+  15:fw-lib-stm32-CocktailOS/core/task.c ****     task->next     = NULL;
+  62              		.loc 1 15 5 is_stmt 1 view .LVU12
+  63              		.loc 1 15 20 is_stmt 0 view .LVU13
+  64 0014 C260     		str	r2, [r0, #12]
+  16:fw-lib-stm32-CocktailOS/core/task.c ****     task->tail     = task;
+  65              		.loc 1 16 5 is_stmt 1 view .LVU14
+  66              		.loc 1 16 20 is_stmt 0 view .LVU15
+  67 0016 0061     		str	r0, [r0, #16]
+  17:fw-lib-stm32-CocktailOS/core/task.c **** 
+  18:fw-lib-stm32-CocktailOS/core/task.c ****     return task;
+  68              		.loc 1 18 5 is_stmt 1 view .LVU16
+  19:fw-lib-stm32-CocktailOS/core/task.c **** }
+  69              		.loc 1 19 1 is_stmt 0 view .LVU17
+  70 0018 38BD     		pop	{r3, r4, r5, pc}
+  71              		.loc 1 19 1 view .LVU18
+  72              		.cfi_endproc
+  73              	.LFE0:
+  75              		.section	.text.Cocktail_freeTask,"ax",%progbits
+  76              		.align	1
+  77              		.global	Cocktail_freeTask
+  78              		.syntax unified
+  79              		.thumb
+  80              		.thumb_func
+  82              	Cocktail_freeTask:
+  83              	.LVL3:
+  84              	.LFB1:
+  20:fw-lib-stm32-CocktailOS/core/task.c **** 
+  21:fw-lib-stm32-CocktailOS/core/task.c **** void
+  22:fw-lib-stm32-CocktailOS/core/task.c **** Cocktail_freeTask(Cocktail_TaskTypeDef *task)
+  23:fw-lib-stm32-CocktailOS/core/task.c **** {
+  85              		.loc 1 23 1 is_stmt 1 view -0
+  86              		.cfi_startproc
+  87              		@ args = 0, pretend = 0, frame = 0
+  88              		@ frame_needed = 0, uses_anonymous_args = 0
+  89              		.loc 1 23 1 is_stmt 0 view .LVU20
+  90 0000 08B5     		push	{r3, lr}
+  91              	.LCFI1:
+  92              		.cfi_def_cfa_offset 8
+  93              		.cfi_offset 3, -8
+  94              		.cfi_offset 14, -4
+ARM GAS  /tmp/ccGxnlqD.s 			page 3
+
+
+  24:fw-lib-stm32-CocktailOS/core/task.c ****     free(task);
+  95              		.loc 1 24 5 is_stmt 1 view .LVU21
+  96 0002 FFF7FEFF 		bl	free
+  97              	.LVL4:
+  25:fw-lib-stm32-CocktailOS/core/task.c **** }
+  98              		.loc 1 25 1 is_stmt 0 view .LVU22
+  99 0006 08BD     		pop	{r3, pc}
+ 100              		.cfi_endproc
+ 101              	.LFE1:
+ 103              		.section	.text.Cocktail_runTask,"ax",%progbits
+ 104              		.align	1
+ 105              		.global	Cocktail_runTask
+ 106              		.syntax unified
+ 107              		.thumb
+ 108              		.thumb_func
+ 110              	Cocktail_runTask:
+ 111              	.LVL5:
+ 112              	.LFB2:
+  26:fw-lib-stm32-CocktailOS/core/task.c **** 
+  27:fw-lib-stm32-CocktailOS/core/task.c **** void
+  28:fw-lib-stm32-CocktailOS/core/task.c **** Cocktail_runTask(Cocktail_TaskTypeDef *task)
+  29:fw-lib-stm32-CocktailOS/core/task.c **** {
+ 113              		.loc 1 29 1 is_stmt 1 view -0
+ 114              		.cfi_startproc
+ 115              		@ args = 0, pretend = 0, frame = 0
+ 116              		@ frame_needed = 0, uses_anonymous_args = 0
+ 117              		.loc 1 29 1 is_stmt 0 view .LVU24
+ 118 0000 08B5     		push	{r3, lr}
+ 119              	.LCFI2:
+ 120              		.cfi_def_cfa_offset 8
+ 121              		.cfi_offset 3, -8
+ 122              		.cfi_offset 14, -4
+  30:fw-lib-stm32-CocktailOS/core/task.c ****     task->callback(task);
+ 123              		.loc 1 30 5 is_stmt 1 view .LVU25
+ 124              		.loc 1 30 9 is_stmt 0 view .LVU26
+ 125 0002 0368     		ldr	r3, [r0]
+ 126              		.loc 1 30 5 view .LVU27
+ 127 0004 9847     		blx	r3
+ 128              	.LVL6:
+  31:fw-lib-stm32-CocktailOS/core/task.c **** }
+ 129              		.loc 1 31 1 view .LVU28
+ 130 0006 08BD     		pop	{r3, pc}
+ 131              		.cfi_endproc
+ 132              	.LFE2:
+ 134              		.text
+ 135              	.Letext0:
+ 136              		.file 2 "fw-lib-stm32-CocktailOS/core/task.h"
+ 137              		.file 3 "/usr/share/gcc-arm-none-eabi-10.3-2021.10/arm-none-eabi/include/stdlib.h"
+ARM GAS  /tmp/ccGxnlqD.s 			page 4
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 task.c
+     /tmp/ccGxnlqD.s:20     .text.Cocktail_newTask:0000000000000000 $t
+     /tmp/ccGxnlqD.s:26     .text.Cocktail_newTask:0000000000000000 Cocktail_newTask
+     /tmp/ccGxnlqD.s:76     .text.Cocktail_freeTask:0000000000000000 $t
+     /tmp/ccGxnlqD.s:82     .text.Cocktail_freeTask:0000000000000000 Cocktail_freeTask
+     /tmp/ccGxnlqD.s:104    .text.Cocktail_runTask:0000000000000000 $t
+     /tmp/ccGxnlqD.s:110    .text.Cocktail_runTask:0000000000000000 Cocktail_runTask
+
+UNDEFINED SYMBOLS
+malloc
+free

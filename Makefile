@@ -36,8 +36,6 @@ BUILD_DIR = build
 ######################################
 # C sources
 C_SOURCES =  \
-fw-lib-stm32-CocktailOS/cocktail_core.c \
-fw-lib-stm32-CocktailOS/cocktail_it.c \
 Core/Src/main.c \
 Core/Src/gpio.c \
 Core/Src/usart.c \
@@ -123,15 +121,18 @@ AS_INCLUDES =
 
 # C includes
 C_INCLUDES =  \
--Ifw-lib-stm32-CocktailOS \
--Ifw-lib-stm32-CocktailOS/core \
--Ifw-lib-stm32-CocktailOS/peripheral \
 -ICore/Inc \
 -IDrivers/STM32F7xx_HAL_Driver/Inc \
 -IDrivers/STM32F7xx_HAL_Driver/Inc/Legacy \
 -IDrivers/CMSIS/Device/ST/STM32F7xx/Include \
 -IDrivers/CMSIS/Include
 
+export C_INCLUDES C_SOURCES
+
+MODULE_LIST = \
+fw-lib-stm32-CocktailOS
+
+include $(addprefix $(MODULE_LIST), /Makefile)
 
 # compile gcc flags
 ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections
