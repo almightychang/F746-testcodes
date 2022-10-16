@@ -25,18 +25,11 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "sys/queue.h"
-
+#include "sched.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-struct foooo
-{
-    int id;
-    STAILQ_ENTRY(foooo) stailq;
-};
-STAILQ_HEAD(fooooq, foooo);
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -100,23 +93,16 @@ main(void)
     MX_USB_OTG_FS_PCD_Init();
     MX_TIM1_Init();
     /* USER CODE BEGIN 2 */
+    Cocktail_SchedulerTypeDef *sched   = Cocktail_addScheduler();
 
-    struct fooooq q;
-    STAILQ_INIT(&q);
-    struct foooo data[3] = { { .id = 1 }, { .id = 2 }, { .id = 3 } };
+    Cocktail_PcbTypeDef       *process = Cocktail_newProcess();
 
-    STAILQ_INSERT_TAIL(&q, &data[0], stailq);
-    STAILQ_INSERT_TAIL(&q, &data[1], stailq);
-    STAILQ_INSERT_TAIL(&q, &data[2], stailq);
+    Cocktail_TaskTypeDef      *t1, *t2, *t3;
 
-    struct foooo *p;
-    char          buf[100];
+    t1 = Cocktail_newTask(NULL, NULL);
+    t2 = Cocktail_newTask(NULL, NULL);
+    t3 = Cocktail_newTask(NULL, NULL);
 
-    STAILQ_FOREACH(p, &q, stailq)
-    {
-        sprintf(buf, "%d\n", p->id);
-        HAL_UART_Transmit(&huart3, buf, strlen(buf), 10);
-    }
     /* USER CODE END 2 */
 
     /* Infinite loop */
