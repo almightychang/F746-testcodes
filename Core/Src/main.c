@@ -34,6 +34,44 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+void task3(Cocktail_TaskTypeDef *task);
+void task2(Cocktail_TaskTypeDef *task);
+void
+task4(Cocktail_TaskTypeDef *task)
+{
+    char buf[100];
+    sprintf(buf, "task4!\n");
+    HAL_UART_Transmit(&huart3, buf, strlen(buf), 10);
+    SET_NEXT_TASK(task, Cocktail_newTask(task2, NULL));
+}
+
+void
+task1(Cocktail_TaskTypeDef *task)
+{
+    char buf[100];
+    sprintf(buf, "task1!\n");
+    HAL_UART_Transmit(&huart3, buf, strlen(buf), 10);
+}
+void
+task2(Cocktail_TaskTypeDef *task)
+{
+    char buf[100];
+    sprintf(buf, "task2!\n");
+    HAL_UART_Transmit(&huart3, buf, strlen(buf), 10);
+
+    SET_NEXT_TASK(task, Cocktail_newTask(task4, NULL));
+}
+
+void
+task3(Cocktail_TaskTypeDef *task)
+{
+    char buf[100];
+    sprintf(buf, "task3!\n");
+    HAL_UART_Transmit(&huart3, buf, strlen(buf), 10);
+    // Cocktail_addTask(task->_pcb, Cocktail_newTask(task2, NULL));
+    // sprintf(buf, "put task2 to %p\n", task->_pcb);
+    // HAL_UART_Transmit(&huart3, buf, strlen(buf), 10);
+}
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -93,15 +131,21 @@ main(void)
     MX_USB_OTG_FS_PCD_Init();
     MX_TIM1_Init();
     /* USER CODE BEGIN 2 */
-    Cocktail_SchedulerTypeDef *sched   = Cocktail_addScheduler();
+    Cocktail_SchedulerTypeDef *sched1   = Cocktail_addScheduler();
+    Cocktail_SchedulerTypeDef *sched2   = Cocktail_addScheduler();
 
-    Cocktail_PcbTypeDef       *process = Cocktail_newProcess();
+    Cocktail_PcbTypeDef       *process1 = Cocktail_newProcess();
+    Cocktail_PcbTypeDef       *process2 = Cocktail_newProcess();
+    char                       buf[100];
+    Cocktail_TaskTypeDef      *task;
 
-    Cocktail_TaskTypeDef      *t1, *t2, *t3;
+    APPEND_TASK(process1, Cocktail_newTask(task1, NULL));
+    APPEND_TASK(process1, Cocktail_newTask(task2, NULL));
+    task = Cocktail_newTask(task3, NULL);
+    APPEND_TASK(process1, task);
 
-    t1 = Cocktail_newTask(NULL, NULL);
-    t2 = Cocktail_newTask(NULL, NULL);
-    t3 = Cocktail_newTask(NULL, NULL);
+    Cocktail_Schedule(process1, sched1);
+    Cocktail_Schedule(process2, sched1);
 
     /* USER CODE END 2 */
 
@@ -109,6 +153,8 @@ main(void)
     /* USER CODE BEGIN WHILE */
     while(1)
     {
+        Cocktail_runScheduler(sched1);
+        Cocktail_runScheduler(sched2);
         HAL_Delay(100);
         HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
         /* USER CODE END WHILE */
