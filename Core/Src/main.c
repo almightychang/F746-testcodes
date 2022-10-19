@@ -42,7 +42,7 @@ task4(Cocktail_TaskTypeDef *task)
     char buf[100];
     sprintf(buf, "task4!\n");
     HAL_UART_Transmit(&huart3, buf, strlen(buf), 10);
-    SET_NEXT_TASK(task, Cocktail_newTask(task2, NULL));
+    APPEND_TASK(task, NEW_TASK(task2, NULL));
 }
 
 void
@@ -59,7 +59,7 @@ task2(Cocktail_TaskTypeDef *task)
     sprintf(buf, "task2!\n");
     HAL_UART_Transmit(&huart3, buf, strlen(buf), 10);
 
-    SET_NEXT_TASK(task, Cocktail_newTask(task4, NULL));
+    APPEND_TASK(task, NEW_TASK(task4, NULL));
 }
 
 void
@@ -131,21 +131,22 @@ main(void)
     MX_USB_OTG_FS_PCD_Init();
     MX_TIM1_Init();
     /* USER CODE BEGIN 2 */
-    Cocktail_SchedulerTypeDef *sched1   = Cocktail_addScheduler();
-    Cocktail_SchedulerTypeDef *sched2   = Cocktail_addScheduler();
+    Cocktail_SchedulerTypeDef *sched1 = Cocktail_addScheduler();
+    Cocktail_SchedulerTypeDef *sched2 = Cocktail_addScheduler();
 
-    Cocktail_PcbTypeDef       *process1 = Cocktail_newProcess();
-    Cocktail_PcbTypeDef       *process2 = Cocktail_newProcess();
-    char                       buf[100];
-    Cocktail_TaskTypeDef      *task;
+    Cocktail_PcbTypeDef       *process1, *process2;
+    INIT_PROCESS(process1);
+    INIT_PROCESS(process2);
+    char                  buf[100];
+    Cocktail_TaskTypeDef *task;
 
-    APPEND_TASK(process1, Cocktail_newTask(task1, NULL));
-    APPEND_TASK(process1, Cocktail_newTask(task2, NULL));
-    task = Cocktail_newTask(task3, NULL);
-    APPEND_TASK(process1, task);
+    PUT_TASK(process1, NEW_TASK(task1, NULL));
+    PUT_TASK(process1, NEW_TASK(task2, NULL));
+    task = NEW_TASK(task3, NULL);
+    PUT_TASK(process1, task);
 
-    Cocktail_Schedule(process1, sched1);
-    Cocktail_Schedule(process2, sched1);
+    SCHEDULE(process1, sched1);
+    SCHEDULE(process2, sched1);
 
     /* USER CODE END 2 */
 
@@ -153,8 +154,8 @@ main(void)
     /* USER CODE BEGIN WHILE */
     while(1)
     {
-        Cocktail_runScheduler(sched1);
-        Cocktail_runScheduler(sched2);
+        EXECUTE(sched1);
+        EXECUTE(sched2);
         HAL_Delay(100);
         HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
         /* USER CODE END WHILE */
