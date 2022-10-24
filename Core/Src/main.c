@@ -45,8 +45,7 @@ task_block(Cocktail_TaskTypeDef *task)
     HAL_UART_Transmit(&huart3, buf, strlen(buf), 10);
 
     if(cnt > 10) return;
-    SET_NEXT_TASK(
-        task, NEW_TASK(COCKTAIL_TIM_PERIOD_ELAPSED_ID(TIM1), task_block, NULL));
+    SET_NEXT_TASK(task, NEW_TASK(ID_POLLING, task_block, NULL));
 }
 void
 task_block2(Cocktail_TaskTypeDef *task)
@@ -56,9 +55,8 @@ task_block2(Cocktail_TaskTypeDef *task)
     sprintf(buf, "blocking-2 %d\n", cnt++);
     HAL_UART_Transmit(&huart3, buf, strlen(buf), 10);
 
-    if(cnt > 15) return;
-    SET_NEXT_TASK(task, NEW_TASK(COCKTAIL_TIM_PERIOD_ELAPSED_ID(TIM1),
-                                 task_block2, NULL));
+    if(cnt > 10) return;
+    SET_NEXT_TASK(task, NEW_TASK(ID_POLLING, task_block2, NULL));
 }
 void task3(Cocktail_TaskTypeDef *task);
 void task2(Cocktail_TaskTypeDef *task);
@@ -194,7 +192,7 @@ main(void)
     while(1)
     {
         EXECUTE(sched[ID_POLLING]);
-        HAL_Delay(100);
+        // HAL_Delay(100);
         HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
         /* USER CODE END WHILE */
 
