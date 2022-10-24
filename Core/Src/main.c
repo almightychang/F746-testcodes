@@ -25,7 +25,9 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "sched.h"
+#include "cocktail.h"
+#include "usart.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -34,6 +36,30 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+void
+task_block(Cocktail_TaskTypeDef *task)
+{
+    static uint32_t cnt = 0;
+    char            buf[100];
+    sprintf(buf, "blocking-1 %d\n", cnt++);
+    HAL_UART_Transmit(&huart3, buf, strlen(buf), 10);
+
+    if(cnt > 10) return;
+    SET_NEXT_TASK(
+        task, NEW_TASK(COCKTAIL_TIM_PERIOD_ELAPSED_ID(TIM1), task_block, NULL));
+}
+void
+task_block2(Cocktail_TaskTypeDef *task)
+{
+    static uint32_t cnt = 0;
+    char            buf[100];
+    sprintf(buf, "blocking-2 %d\n", cnt++);
+    HAL_UART_Transmit(&huart3, buf, strlen(buf), 10);
+
+    if(cnt > 15) return;
+    SET_NEXT_TASK(task, NEW_TASK(COCKTAIL_TIM_PERIOD_ELAPSED_ID(TIM1),
+                                 task_block2, NULL));
+}
 void task3(Cocktail_TaskTypeDef *task);
 void task2(Cocktail_TaskTypeDef *task);
 void
@@ -42,7 +68,8 @@ task4(Cocktail_TaskTypeDef *task)
     char buf[100];
     sprintf(buf, "task4!\n");
     HAL_UART_Transmit(&huart3, buf, strlen(buf), 10);
-    APPEND_TASK(task, NEW_TASK(task2, NULL));
+    //    SET_NEXT_TASK(task, NEW_TASK(COCKTAIL_EXTI_ID(GPIO_PIN_13), task2,
+    //    NULL));
 }
 
 void
@@ -52,6 +79,7 @@ task1(Cocktail_TaskTypeDef *task)
     sprintf(buf, "task1!\n");
     HAL_UART_Transmit(&huart3, buf, strlen(buf), 10);
 }
+
 void
 task2(Cocktail_TaskTypeDef *task)
 {
@@ -59,7 +87,19 @@ task2(Cocktail_TaskTypeDef *task)
     sprintf(buf, "task2!\n");
     HAL_UART_Transmit(&huart3, buf, strlen(buf), 10);
 
-    APPEND_TASK(task, NEW_TASK(task4, NULL));
+    Cocktail_EventTypeDef *event = NEW_EVENT(task->_pcb);
+    Cocktail_PcbTypeDef   *pcb;
+    INIT_PROCESS(pcb);
+    PUT_TASK(pcb, NEW_TASK(ID_POLLING, task_block, NULL));
+    WAIT_FOR(event, pcb);
+
+    INIT_PROCESS(pcb);
+    PUT_TASK(pcb, NEW_TASK(ID_POLLING, task_block2, NULL));
+    WAIT_FOR(event, pcb);
+
+    //    SET_NEXT_TASK(task,
+    //                  NEW_TASK(COCKTAIL_TIM_PERIOD_ELAPSED_ID(TIM1), task4,
+    //                  NULL));
 }
 
 void
@@ -130,32 +170,30 @@ main(void)
     MX_USART3_UART_Init();
     MX_USB_OTG_FS_PCD_Init();
     MX_TIM1_Init();
+    MX_UART4_Init();
+    MX_USART6_Init();
     /* USER CODE BEGIN 2 */
-    Cocktail_SchedulerTypeDef *sched1 = Cocktail_addScheduler();
-    Cocktail_SchedulerTypeDef *sched2 = Cocktail_addScheduler();
+    Cocktail_Init();
 
-    Cocktail_PcbTypeDef       *process1, *process2;
+    Cocktail_PcbTypeDef *process1;
     INIT_PROCESS(process1);
-    INIT_PROCESS(process2);
-    char                  buf[100];
-    Cocktail_TaskTypeDef *task;
 
-    PUT_TASK(process1, NEW_TASK(task1, NULL));
-    PUT_TASK(process1, NEW_TASK(task2, NULL));
-    task = NEW_TASK(task3, NULL);
-    PUT_TASK(process1, task);
+    PUT_TASK(process1, NEW_TASK(ID_POLLING, task1, NULL));
+    PUT_TASK(process1, NEW_TASK(ID_POLLING, task2, NULL));
+    PUT_TASK(process1, NEW_TASK(ID_POLLING, task3, NULL));
 
-    SCHEDULE(process1, sched1);
-    SCHEDULE(process2, sched1);
+    SCHEDULE(process1);
 
+    HAL_TIM_Base_Start_IT(&htim1);
+
+    char buf[100];
     /* USER CODE END 2 */
 
     /* Infinite loop */
     /* USER CODE BEGIN WHILE */
     while(1)
     {
-        EXECUTE(sched1);
-        EXECUTE(sched2);
+        EXECUTE(sched[ID_POLLING]);
         HAL_Delay(100);
         HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
         /* USER CODE END WHILE */
