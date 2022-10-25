@@ -17,6 +17,7 @@
       "-Ifw-lib-stm32-CocktailOS/kernel",
       "-Ifw-lib-stm32-CocktailOS/kernel/core",
       "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
       "-Og",
       "-Wall",
       "-fdata-sections",
@@ -28,9 +29,9 @@
       "build/main.o",
       "Core/Src/main.c"
     ],
-    "directory": "/home/supersexystrong/Workspace/F746-testcodes",
-    "file": "/home/supersexystrong/Workspace/F746-testcodes/Core/Src/main.c",
-    "output": "/home/supersexystrong/Workspace/F746-testcodes/build/main.o"
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/Core/Src/main.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/main.o"
   },
   {
     "arguments": [
@@ -50,6 +51,7 @@
       "-Ifw-lib-stm32-CocktailOS/kernel",
       "-Ifw-lib-stm32-CocktailOS/kernel/core",
       "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
       "-Og",
       "-Wall",
       "-fdata-sections",
@@ -61,9 +63,9 @@
       "build/gpio.o",
       "Core/Src/gpio.c"
     ],
-    "directory": "/home/supersexystrong/Workspace/F746-testcodes",
-    "file": "/home/supersexystrong/Workspace/F746-testcodes/Core/Src/gpio.c",
-    "output": "/home/supersexystrong/Workspace/F746-testcodes/build/gpio.o"
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/Core/Src/gpio.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/gpio.o"
   },
   {
     "arguments": [
@@ -83,6 +85,7 @@
       "-Ifw-lib-stm32-CocktailOS/kernel",
       "-Ifw-lib-stm32-CocktailOS/kernel/core",
       "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
       "-Og",
       "-Wall",
       "-fdata-sections",
@@ -94,9 +97,9 @@
       "build/usart.o",
       "Core/Src/usart.c"
     ],
-    "directory": "/home/supersexystrong/Workspace/F746-testcodes",
-    "file": "/home/supersexystrong/Workspace/F746-testcodes/Core/Src/usart.c",
-    "output": "/home/supersexystrong/Workspace/F746-testcodes/build/usart.o"
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/Core/Src/usart.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/usart.o"
   },
   {
     "arguments": [
@@ -116,6 +119,7 @@
       "-Ifw-lib-stm32-CocktailOS/kernel",
       "-Ifw-lib-stm32-CocktailOS/kernel/core",
       "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
       "-Og",
       "-Wall",
       "-fdata-sections",
@@ -127,9 +131,9 @@
       "build/usb_otg.o",
       "Core/Src/usb_otg.c"
     ],
-    "directory": "/home/supersexystrong/Workspace/F746-testcodes",
-    "file": "/home/supersexystrong/Workspace/F746-testcodes/Core/Src/usb_otg.c",
-    "output": "/home/supersexystrong/Workspace/F746-testcodes/build/usb_otg.o"
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/Core/Src/usb_otg.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/usb_otg.o"
   },
   {
     "arguments": [
@@ -149,6 +153,7 @@
       "-Ifw-lib-stm32-CocktailOS/kernel",
       "-Ifw-lib-stm32-CocktailOS/kernel/core",
       "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
       "-Og",
       "-Wall",
       "-fdata-sections",
@@ -160,9 +165,9 @@
       "build/stm32f7xx_it.o",
       "Core/Src/stm32f7xx_it.c"
     ],
-    "directory": "/home/supersexystrong/Workspace/F746-testcodes",
-    "file": "/home/supersexystrong/Workspace/F746-testcodes/Core/Src/stm32f7xx_it.c",
-    "output": "/home/supersexystrong/Workspace/F746-testcodes/build/stm32f7xx_it.o"
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/Core/Src/stm32f7xx_it.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/stm32f7xx_it.o"
   },
   {
     "arguments": [
@@ -182,6 +187,7 @@
       "-Ifw-lib-stm32-CocktailOS/kernel",
       "-Ifw-lib-stm32-CocktailOS/kernel/core",
       "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
       "-Og",
       "-Wall",
       "-fdata-sections",
@@ -193,9 +199,9 @@
       "build/stm32f7xx_hal_msp.o",
       "Core/Src/stm32f7xx_hal_msp.c"
     ],
-    "directory": "/home/supersexystrong/Workspace/F746-testcodes",
-    "file": "/home/supersexystrong/Workspace/F746-testcodes/Core/Src/stm32f7xx_hal_msp.c",
-    "output": "/home/supersexystrong/Workspace/F746-testcodes/build/stm32f7xx_hal_msp.o"
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/Core/Src/stm32f7xx_hal_msp.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/stm32f7xx_hal_msp.o"
   },
   {
     "arguments": [
@@ -215,6 +221,7 @@
       "-Ifw-lib-stm32-CocktailOS/kernel",
       "-Ifw-lib-stm32-CocktailOS/kernel/core",
       "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
       "-Og",
       "-Wall",
       "-fdata-sections",
@@ -226,9 +233,9 @@
       "build/stm32f7xx_hal_cortex.o",
       "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.c"
     ],
-    "directory": "/home/supersexystrong/Workspace/F746-testcodes",
-    "file": "/home/supersexystrong/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.c",
-    "output": "/home/supersexystrong/Workspace/F746-testcodes/build/stm32f7xx_hal_cortex.o"
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/stm32f7xx_hal_cortex.o"
   },
   {
     "arguments": [
@@ -248,6 +255,7 @@
       "-Ifw-lib-stm32-CocktailOS/kernel",
       "-Ifw-lib-stm32-CocktailOS/kernel/core",
       "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
       "-Og",
       "-Wall",
       "-fdata-sections",
@@ -259,9 +267,9 @@
       "build/stm32f7xx_hal_rcc.o",
       "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.c"
     ],
-    "directory": "/home/supersexystrong/Workspace/F746-testcodes",
-    "file": "/home/supersexystrong/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.c",
-    "output": "/home/supersexystrong/Workspace/F746-testcodes/build/stm32f7xx_hal_rcc.o"
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/stm32f7xx_hal_rcc.o"
   },
   {
     "arguments": [
@@ -281,6 +289,7 @@
       "-Ifw-lib-stm32-CocktailOS/kernel",
       "-Ifw-lib-stm32-CocktailOS/kernel/core",
       "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
       "-Og",
       "-Wall",
       "-fdata-sections",
@@ -292,9 +301,9 @@
       "build/stm32f7xx_hal_rcc_ex.o",
       "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc_ex.c"
     ],
-    "directory": "/home/supersexystrong/Workspace/F746-testcodes",
-    "file": "/home/supersexystrong/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc_ex.c",
-    "output": "/home/supersexystrong/Workspace/F746-testcodes/build/stm32f7xx_hal_rcc_ex.o"
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc_ex.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/stm32f7xx_hal_rcc_ex.o"
   },
   {
     "arguments": [
@@ -314,6 +323,7 @@
       "-Ifw-lib-stm32-CocktailOS/kernel",
       "-Ifw-lib-stm32-CocktailOS/kernel/core",
       "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
       "-Og",
       "-Wall",
       "-fdata-sections",
@@ -325,9 +335,9 @@
       "build/stm32f7xx_hal_flash.o",
       "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash.c"
     ],
-    "directory": "/home/supersexystrong/Workspace/F746-testcodes",
-    "file": "/home/supersexystrong/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash.c",
-    "output": "/home/supersexystrong/Workspace/F746-testcodes/build/stm32f7xx_hal_flash.o"
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/stm32f7xx_hal_flash.o"
   },
   {
     "arguments": [
@@ -347,6 +357,7 @@
       "-Ifw-lib-stm32-CocktailOS/kernel",
       "-Ifw-lib-stm32-CocktailOS/kernel/core",
       "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
       "-Og",
       "-Wall",
       "-fdata-sections",
@@ -358,9 +369,9 @@
       "build/stm32f7xx_hal_flash_ex.o",
       "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash_ex.c"
     ],
-    "directory": "/home/supersexystrong/Workspace/F746-testcodes",
-    "file": "/home/supersexystrong/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash_ex.c",
-    "output": "/home/supersexystrong/Workspace/F746-testcodes/build/stm32f7xx_hal_flash_ex.o"
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_flash_ex.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/stm32f7xx_hal_flash_ex.o"
   },
   {
     "arguments": [
@@ -380,6 +391,7 @@
       "-Ifw-lib-stm32-CocktailOS/kernel",
       "-Ifw-lib-stm32-CocktailOS/kernel/core",
       "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
       "-Og",
       "-Wall",
       "-fdata-sections",
@@ -391,9 +403,9 @@
       "build/stm32f7xx_hal_gpio.o",
       "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.c"
     ],
-    "directory": "/home/supersexystrong/Workspace/F746-testcodes",
-    "file": "/home/supersexystrong/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.c",
-    "output": "/home/supersexystrong/Workspace/F746-testcodes/build/stm32f7xx_hal_gpio.o"
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/stm32f7xx_hal_gpio.o"
   },
   {
     "arguments": [
@@ -413,6 +425,7 @@
       "-Ifw-lib-stm32-CocktailOS/kernel",
       "-Ifw-lib-stm32-CocktailOS/kernel/core",
       "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
       "-Og",
       "-Wall",
       "-fdata-sections",
@@ -424,9 +437,9 @@
       "build/stm32f7xx_hal_dma.o",
       "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma.c"
     ],
-    "directory": "/home/supersexystrong/Workspace/F746-testcodes",
-    "file": "/home/supersexystrong/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma.c",
-    "output": "/home/supersexystrong/Workspace/F746-testcodes/build/stm32f7xx_hal_dma.o"
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/stm32f7xx_hal_dma.o"
   },
   {
     "arguments": [
@@ -446,6 +459,7 @@
       "-Ifw-lib-stm32-CocktailOS/kernel",
       "-Ifw-lib-stm32-CocktailOS/kernel/core",
       "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
       "-Og",
       "-Wall",
       "-fdata-sections",
@@ -457,9 +471,9 @@
       "build/stm32f7xx_hal_dma_ex.o",
       "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma_ex.c"
     ],
-    "directory": "/home/supersexystrong/Workspace/F746-testcodes",
-    "file": "/home/supersexystrong/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma_ex.c",
-    "output": "/home/supersexystrong/Workspace/F746-testcodes/build/stm32f7xx_hal_dma_ex.o"
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma_ex.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/stm32f7xx_hal_dma_ex.o"
   },
   {
     "arguments": [
@@ -479,6 +493,7 @@
       "-Ifw-lib-stm32-CocktailOS/kernel",
       "-Ifw-lib-stm32-CocktailOS/kernel/core",
       "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
       "-Og",
       "-Wall",
       "-fdata-sections",
@@ -490,9 +505,9 @@
       "build/stm32f7xx_hal_pwr.o",
       "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr.c"
     ],
-    "directory": "/home/supersexystrong/Workspace/F746-testcodes",
-    "file": "/home/supersexystrong/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr.c",
-    "output": "/home/supersexystrong/Workspace/F746-testcodes/build/stm32f7xx_hal_pwr.o"
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/stm32f7xx_hal_pwr.o"
   },
   {
     "arguments": [
@@ -512,6 +527,7 @@
       "-Ifw-lib-stm32-CocktailOS/kernel",
       "-Ifw-lib-stm32-CocktailOS/kernel/core",
       "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
       "-Og",
       "-Wall",
       "-fdata-sections",
@@ -523,9 +539,9 @@
       "build/stm32f7xx_hal_pwr_ex.o",
       "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr_ex.c"
     ],
-    "directory": "/home/supersexystrong/Workspace/F746-testcodes",
-    "file": "/home/supersexystrong/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr_ex.c",
-    "output": "/home/supersexystrong/Workspace/F746-testcodes/build/stm32f7xx_hal_pwr_ex.o"
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr_ex.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/stm32f7xx_hal_pwr_ex.o"
   },
   {
     "arguments": [
@@ -545,6 +561,7 @@
       "-Ifw-lib-stm32-CocktailOS/kernel",
       "-Ifw-lib-stm32-CocktailOS/kernel/core",
       "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
       "-Og",
       "-Wall",
       "-fdata-sections",
@@ -556,9 +573,9 @@
       "build/stm32f7xx_hal.o",
       "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.c"
     ],
-    "directory": "/home/supersexystrong/Workspace/F746-testcodes",
-    "file": "/home/supersexystrong/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.c",
-    "output": "/home/supersexystrong/Workspace/F746-testcodes/build/stm32f7xx_hal.o"
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/stm32f7xx_hal.o"
   },
   {
     "arguments": [
@@ -578,6 +595,7 @@
       "-Ifw-lib-stm32-CocktailOS/kernel",
       "-Ifw-lib-stm32-CocktailOS/kernel/core",
       "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
       "-Og",
       "-Wall",
       "-fdata-sections",
@@ -589,9 +607,9 @@
       "build/stm32f7xx_hal_i2c.o",
       "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c.c"
     ],
-    "directory": "/home/supersexystrong/Workspace/F746-testcodes",
-    "file": "/home/supersexystrong/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c.c",
-    "output": "/home/supersexystrong/Workspace/F746-testcodes/build/stm32f7xx_hal_i2c.o"
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/stm32f7xx_hal_i2c.o"
   },
   {
     "arguments": [
@@ -611,6 +629,7 @@
       "-Ifw-lib-stm32-CocktailOS/kernel",
       "-Ifw-lib-stm32-CocktailOS/kernel/core",
       "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
       "-Og",
       "-Wall",
       "-fdata-sections",
@@ -622,9 +641,9 @@
       "build/stm32f7xx_hal_i2c_ex.o",
       "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c_ex.c"
     ],
-    "directory": "/home/supersexystrong/Workspace/F746-testcodes",
-    "file": "/home/supersexystrong/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c_ex.c",
-    "output": "/home/supersexystrong/Workspace/F746-testcodes/build/stm32f7xx_hal_i2c_ex.o"
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_i2c_ex.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/stm32f7xx_hal_i2c_ex.o"
   },
   {
     "arguments": [
@@ -644,6 +663,7 @@
       "-Ifw-lib-stm32-CocktailOS/kernel",
       "-Ifw-lib-stm32-CocktailOS/kernel/core",
       "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
       "-Og",
       "-Wall",
       "-fdata-sections",
@@ -655,9 +675,9 @@
       "build/stm32f7xx_hal_exti.o",
       "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_exti.c"
     ],
-    "directory": "/home/supersexystrong/Workspace/F746-testcodes",
-    "file": "/home/supersexystrong/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_exti.c",
-    "output": "/home/supersexystrong/Workspace/F746-testcodes/build/stm32f7xx_hal_exti.o"
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_exti.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/stm32f7xx_hal_exti.o"
   },
   {
     "arguments": [
@@ -677,6 +697,7 @@
       "-Ifw-lib-stm32-CocktailOS/kernel",
       "-Ifw-lib-stm32-CocktailOS/kernel/core",
       "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
       "-Og",
       "-Wall",
       "-fdata-sections",
@@ -688,9 +709,9 @@
       "build/stm32f7xx_hal_tim.o",
       "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.c"
     ],
-    "directory": "/home/supersexystrong/Workspace/F746-testcodes",
-    "file": "/home/supersexystrong/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.c",
-    "output": "/home/supersexystrong/Workspace/F746-testcodes/build/stm32f7xx_hal_tim.o"
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/stm32f7xx_hal_tim.o"
   },
   {
     "arguments": [
@@ -710,6 +731,7 @@
       "-Ifw-lib-stm32-CocktailOS/kernel",
       "-Ifw-lib-stm32-CocktailOS/kernel/core",
       "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
       "-Og",
       "-Wall",
       "-fdata-sections",
@@ -721,9 +743,9 @@
       "build/stm32f7xx_hal_tim_ex.o",
       "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim_ex.c"
     ],
-    "directory": "/home/supersexystrong/Workspace/F746-testcodes",
-    "file": "/home/supersexystrong/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim_ex.c",
-    "output": "/home/supersexystrong/Workspace/F746-testcodes/build/stm32f7xx_hal_tim_ex.o"
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim_ex.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/stm32f7xx_hal_tim_ex.o"
   },
   {
     "arguments": [
@@ -743,6 +765,7 @@
       "-Ifw-lib-stm32-CocktailOS/kernel",
       "-Ifw-lib-stm32-CocktailOS/kernel/core",
       "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
       "-Og",
       "-Wall",
       "-fdata-sections",
@@ -754,9 +777,9 @@
       "build/stm32f7xx_hal_uart.o",
       "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_uart.c"
     ],
-    "directory": "/home/supersexystrong/Workspace/F746-testcodes",
-    "file": "/home/supersexystrong/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_uart.c",
-    "output": "/home/supersexystrong/Workspace/F746-testcodes/build/stm32f7xx_hal_uart.o"
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_uart.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/stm32f7xx_hal_uart.o"
   },
   {
     "arguments": [
@@ -776,6 +799,7 @@
       "-Ifw-lib-stm32-CocktailOS/kernel",
       "-Ifw-lib-stm32-CocktailOS/kernel/core",
       "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
       "-Og",
       "-Wall",
       "-fdata-sections",
@@ -787,9 +811,9 @@
       "build/stm32f7xx_hal_uart_ex.o",
       "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_uart_ex.c"
     ],
-    "directory": "/home/supersexystrong/Workspace/F746-testcodes",
-    "file": "/home/supersexystrong/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_uart_ex.c",
-    "output": "/home/supersexystrong/Workspace/F746-testcodes/build/stm32f7xx_hal_uart_ex.o"
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_uart_ex.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/stm32f7xx_hal_uart_ex.o"
   },
   {
     "arguments": [
@@ -809,6 +833,7 @@
       "-Ifw-lib-stm32-CocktailOS/kernel",
       "-Ifw-lib-stm32-CocktailOS/kernel/core",
       "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
       "-Og",
       "-Wall",
       "-fdata-sections",
@@ -820,9 +845,9 @@
       "build/stm32f7xx_hal_pcd.o",
       "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pcd.c"
     ],
-    "directory": "/home/supersexystrong/Workspace/F746-testcodes",
-    "file": "/home/supersexystrong/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pcd.c",
-    "output": "/home/supersexystrong/Workspace/F746-testcodes/build/stm32f7xx_hal_pcd.o"
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pcd.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/stm32f7xx_hal_pcd.o"
   },
   {
     "arguments": [
@@ -842,6 +867,7 @@
       "-Ifw-lib-stm32-CocktailOS/kernel",
       "-Ifw-lib-stm32-CocktailOS/kernel/core",
       "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
       "-Og",
       "-Wall",
       "-fdata-sections",
@@ -853,9 +879,9 @@
       "build/stm32f7xx_hal_pcd_ex.o",
       "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pcd_ex.c"
     ],
-    "directory": "/home/supersexystrong/Workspace/F746-testcodes",
-    "file": "/home/supersexystrong/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pcd_ex.c",
-    "output": "/home/supersexystrong/Workspace/F746-testcodes/build/stm32f7xx_hal_pcd_ex.o"
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pcd_ex.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/stm32f7xx_hal_pcd_ex.o"
   },
   {
     "arguments": [
@@ -875,6 +901,7 @@
       "-Ifw-lib-stm32-CocktailOS/kernel",
       "-Ifw-lib-stm32-CocktailOS/kernel/core",
       "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
       "-Og",
       "-Wall",
       "-fdata-sections",
@@ -886,9 +913,9 @@
       "build/stm32f7xx_ll_usb.o",
       "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_usb.c"
     ],
-    "directory": "/home/supersexystrong/Workspace/F746-testcodes",
-    "file": "/home/supersexystrong/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_usb.c",
-    "output": "/home/supersexystrong/Workspace/F746-testcodes/build/stm32f7xx_ll_usb.o"
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_usb.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/stm32f7xx_ll_usb.o"
   },
   {
     "arguments": [
@@ -908,6 +935,7 @@
       "-Ifw-lib-stm32-CocktailOS/kernel",
       "-Ifw-lib-stm32-CocktailOS/kernel/core",
       "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
       "-Og",
       "-Wall",
       "-fdata-sections",
@@ -919,9 +947,9 @@
       "build/system_stm32f7xx.o",
       "Core/Src/system_stm32f7xx.c"
     ],
-    "directory": "/home/supersexystrong/Workspace/F746-testcodes",
-    "file": "/home/supersexystrong/Workspace/F746-testcodes/Core/Src/system_stm32f7xx.c",
-    "output": "/home/supersexystrong/Workspace/F746-testcodes/build/system_stm32f7xx.o"
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/Core/Src/system_stm32f7xx.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/system_stm32f7xx.o"
   },
   {
     "arguments": [
@@ -941,6 +969,7 @@
       "-Ifw-lib-stm32-CocktailOS/kernel",
       "-Ifw-lib-stm32-CocktailOS/kernel/core",
       "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
       "-Og",
       "-Wall",
       "-fdata-sections",
@@ -952,9 +981,9 @@
       "build/tim.o",
       "Core/Src/tim.c"
     ],
-    "directory": "/home/supersexystrong/Workspace/F746-testcodes",
-    "file": "/home/supersexystrong/Workspace/F746-testcodes/Core/Src/tim.c",
-    "output": "/home/supersexystrong/Workspace/F746-testcodes/build/tim.o"
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/Core/Src/tim.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/tim.o"
   },
   {
     "arguments": [
@@ -974,6 +1003,41 @@
       "-Ifw-lib-stm32-CocktailOS/kernel",
       "-Ifw-lib-stm32-CocktailOS/kernel/core",
       "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
+      "-Og",
+      "-Wall",
+      "-fdata-sections",
+      "-ffunction-sections",
+      "-g",
+      "-gdwarf-2",
+      "-Wa,-a,-ad,-alms=build/stm32f7xx_hal_usart.lst",
+      "-o",
+      "build/stm32f7xx_hal_usart.o",
+      "Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_usart.c"
+    ],
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_usart.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/stm32f7xx_hal_usart.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/arm-none-eabi-gcc",
+      "-c",
+      "-mcpu=cortex-m7",
+      "-mthumb",
+      "-mfpu=fpv5-sp-d16",
+      "-mfloat-abi=hard",
+      "-DUSE_HAL_DRIVER",
+      "-DSTM32F746xx",
+      "-ICore/Inc",
+      "-IDrivers/STM32F7xx_HAL_Driver/Inc",
+      "-IDrivers/STM32F7xx_HAL_Driver/Inc/Legacy",
+      "-IDrivers/CMSIS/Device/ST/STM32F7xx/Include",
+      "-IDrivers/CMSIS/Include",
+      "-Ifw-lib-stm32-CocktailOS/kernel",
+      "-Ifw-lib-stm32-CocktailOS/kernel/core",
+      "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
       "-Og",
       "-Wall",
       "-fdata-sections",
@@ -985,9 +1049,9 @@
       "build/sched.o",
       "fw-lib-stm32-CocktailOS/kernel/core/sched.c"
     ],
-    "directory": "/home/supersexystrong/Workspace/F746-testcodes",
-    "file": "/home/supersexystrong/Workspace/F746-testcodes/fw-lib-stm32-CocktailOS/kernel/core/sched.c",
-    "output": "/home/supersexystrong/Workspace/F746-testcodes/build/sched.o"
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/fw-lib-stm32-CocktailOS/kernel/core/sched.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/sched.o"
   },
   {
     "arguments": [
@@ -1007,6 +1071,7 @@
       "-Ifw-lib-stm32-CocktailOS/kernel",
       "-Ifw-lib-stm32-CocktailOS/kernel/core",
       "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
       "-Og",
       "-Wall",
       "-fdata-sections",
@@ -1018,9 +1083,9 @@
       "build/task.o",
       "fw-lib-stm32-CocktailOS/kernel/core/task.c"
     ],
-    "directory": "/home/supersexystrong/Workspace/F746-testcodes",
-    "file": "/home/supersexystrong/Workspace/F746-testcodes/fw-lib-stm32-CocktailOS/kernel/core/task.c",
-    "output": "/home/supersexystrong/Workspace/F746-testcodes/build/task.o"
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/fw-lib-stm32-CocktailOS/kernel/core/task.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/task.o"
   },
   {
     "arguments": [
@@ -1040,6 +1105,75 @@
       "-Ifw-lib-stm32-CocktailOS/kernel",
       "-Ifw-lib-stm32-CocktailOS/kernel/core",
       "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
+      "-Og",
+      "-Wall",
+      "-fdata-sections",
+      "-ffunction-sections",
+      "-g",
+      "-gdwarf-2",
+      "-Wa,-a,-ad,-alms=build/pcb.lst",
+      "-o",
+      "build/pcb.o",
+      "fw-lib-stm32-CocktailOS/kernel/core/pcb.c"
+    ],
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/fw-lib-stm32-CocktailOS/kernel/core/pcb.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/pcb.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/arm-none-eabi-gcc",
+      "-c",
+      "-mcpu=cortex-m7",
+      "-mthumb",
+      "-mfpu=fpv5-sp-d16",
+      "-mfloat-abi=hard",
+      "-DUSE_HAL_DRIVER",
+      "-DSTM32F746xx",
+      "-ICore/Inc",
+      "-IDrivers/STM32F7xx_HAL_Driver/Inc",
+      "-IDrivers/STM32F7xx_HAL_Driver/Inc/Legacy",
+      "-IDrivers/CMSIS/Device/ST/STM32F7xx/Include",
+      "-IDrivers/CMSIS/Include",
+      "-Ifw-lib-stm32-CocktailOS/kernel",
+      "-Ifw-lib-stm32-CocktailOS/kernel/core",
+      "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
+      "-Og",
+      "-Wall",
+      "-fdata-sections",
+      "-ffunction-sections",
+      "-g",
+      "-gdwarf-2",
+      "-Wa,-a,-ad,-alms=build/event.lst",
+      "-o",
+      "build/event.o",
+      "fw-lib-stm32-CocktailOS/kernel/core/event.c"
+    ],
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/fw-lib-stm32-CocktailOS/kernel/core/event.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/event.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/arm-none-eabi-gcc",
+      "-c",
+      "-mcpu=cortex-m7",
+      "-mthumb",
+      "-mfpu=fpv5-sp-d16",
+      "-mfloat-abi=hard",
+      "-DUSE_HAL_DRIVER",
+      "-DSTM32F746xx",
+      "-ICore/Inc",
+      "-IDrivers/STM32F7xx_HAL_Driver/Inc",
+      "-IDrivers/STM32F7xx_HAL_Driver/Inc/Legacy",
+      "-IDrivers/CMSIS/Device/ST/STM32F7xx/Include",
+      "-IDrivers/CMSIS/Include",
+      "-Ifw-lib-stm32-CocktailOS/kernel",
+      "-Ifw-lib-stm32-CocktailOS/kernel/core",
+      "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
       "-Og",
       "-Wall",
       "-fdata-sections",
@@ -1051,9 +1185,9 @@
       "build/cocktail_can.o",
       "fw-lib-stm32-CocktailOS/kernel/peripheral/cocktail_can.c"
     ],
-    "directory": "/home/supersexystrong/Workspace/F746-testcodes",
-    "file": "/home/supersexystrong/Workspace/F746-testcodes/fw-lib-stm32-CocktailOS/kernel/peripheral/cocktail_can.c",
-    "output": "/home/supersexystrong/Workspace/F746-testcodes/build/cocktail_can.o"
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/fw-lib-stm32-CocktailOS/kernel/peripheral/cocktail_can.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/cocktail_can.o"
   },
   {
     "arguments": [
@@ -1073,6 +1207,7 @@
       "-Ifw-lib-stm32-CocktailOS/kernel",
       "-Ifw-lib-stm32-CocktailOS/kernel/core",
       "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
       "-Og",
       "-Wall",
       "-fdata-sections",
@@ -1084,9 +1219,9 @@
       "build/cocktail_tim.o",
       "fw-lib-stm32-CocktailOS/kernel/peripheral/cocktail_tim.c"
     ],
-    "directory": "/home/supersexystrong/Workspace/F746-testcodes",
-    "file": "/home/supersexystrong/Workspace/F746-testcodes/fw-lib-stm32-CocktailOS/kernel/peripheral/cocktail_tim.c",
-    "output": "/home/supersexystrong/Workspace/F746-testcodes/build/cocktail_tim.o"
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/fw-lib-stm32-CocktailOS/kernel/peripheral/cocktail_tim.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/cocktail_tim.o"
   },
   {
     "arguments": [
@@ -1106,6 +1241,7 @@
       "-Ifw-lib-stm32-CocktailOS/kernel",
       "-Ifw-lib-stm32-CocktailOS/kernel/core",
       "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
       "-Og",
       "-Wall",
       "-fdata-sections",
@@ -1117,9 +1253,9 @@
       "build/cocktail_gpio.o",
       "fw-lib-stm32-CocktailOS/kernel/peripheral/cocktail_gpio.c"
     ],
-    "directory": "/home/supersexystrong/Workspace/F746-testcodes",
-    "file": "/home/supersexystrong/Workspace/F746-testcodes/fw-lib-stm32-CocktailOS/kernel/peripheral/cocktail_gpio.c",
-    "output": "/home/supersexystrong/Workspace/F746-testcodes/build/cocktail_gpio.o"
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/fw-lib-stm32-CocktailOS/kernel/peripheral/cocktail_gpio.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/cocktail_gpio.o"
   },
   {
     "arguments": [
@@ -1139,6 +1275,7 @@
       "-Ifw-lib-stm32-CocktailOS/kernel",
       "-Ifw-lib-stm32-CocktailOS/kernel/core",
       "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
       "-Og",
       "-Wall",
       "-fdata-sections",
@@ -1150,9 +1287,9 @@
       "build/cocktail_i2c.o",
       "fw-lib-stm32-CocktailOS/kernel/peripheral/cocktail_i2c.c"
     ],
-    "directory": "/home/supersexystrong/Workspace/F746-testcodes",
-    "file": "/home/supersexystrong/Workspace/F746-testcodes/fw-lib-stm32-CocktailOS/kernel/peripheral/cocktail_i2c.c",
-    "output": "/home/supersexystrong/Workspace/F746-testcodes/build/cocktail_i2c.o"
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/fw-lib-stm32-CocktailOS/kernel/peripheral/cocktail_i2c.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/cocktail_i2c.o"
   },
   {
     "arguments": [
@@ -1172,6 +1309,7 @@
       "-Ifw-lib-stm32-CocktailOS/kernel",
       "-Ifw-lib-stm32-CocktailOS/kernel/core",
       "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
       "-Og",
       "-Wall",
       "-fdata-sections",
@@ -1183,8 +1321,145 @@
       "build/cocktail_uart.o",
       "fw-lib-stm32-CocktailOS/kernel/peripheral/cocktail_uart.c"
     ],
-    "directory": "/home/supersexystrong/Workspace/F746-testcodes",
-    "file": "/home/supersexystrong/Workspace/F746-testcodes/fw-lib-stm32-CocktailOS/kernel/peripheral/cocktail_uart.c",
-    "output": "/home/supersexystrong/Workspace/F746-testcodes/build/cocktail_uart.o"
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/fw-lib-stm32-CocktailOS/kernel/peripheral/cocktail_uart.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/cocktail_uart.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/arm-none-eabi-gcc",
+      "-c",
+      "-mcpu=cortex-m7",
+      "-mthumb",
+      "-mfpu=fpv5-sp-d16",
+      "-mfloat-abi=hard",
+      "-DUSE_HAL_DRIVER",
+      "-DSTM32F746xx",
+      "-ICore/Inc",
+      "-IDrivers/STM32F7xx_HAL_Driver/Inc",
+      "-IDrivers/STM32F7xx_HAL_Driver/Inc/Legacy",
+      "-IDrivers/CMSIS/Device/ST/STM32F7xx/Include",
+      "-IDrivers/CMSIS/Include",
+      "-Ifw-lib-stm32-CocktailOS/kernel",
+      "-Ifw-lib-stm32-CocktailOS/kernel/core",
+      "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
+      "-Og",
+      "-Wall",
+      "-fdata-sections",
+      "-ffunction-sections",
+      "-g",
+      "-gdwarf-2",
+      "-Wa,-a,-ad,-alms=build/cocktail_usart.lst",
+      "-o",
+      "build/cocktail_usart.o",
+      "fw-lib-stm32-CocktailOS/kernel/peripheral/cocktail_usart.c"
+    ],
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/fw-lib-stm32-CocktailOS/kernel/peripheral/cocktail_usart.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/cocktail_usart.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/arm-none-eabi-gcc",
+      "-c",
+      "-mcpu=cortex-m7",
+      "-mthumb",
+      "-mfpu=fpv5-sp-d16",
+      "-mfloat-abi=hard",
+      "-DUSE_HAL_DRIVER",
+      "-DSTM32F746xx",
+      "-ICore/Inc",
+      "-IDrivers/STM32F7xx_HAL_Driver/Inc",
+      "-IDrivers/STM32F7xx_HAL_Driver/Inc/Legacy",
+      "-IDrivers/CMSIS/Device/ST/STM32F7xx/Include",
+      "-IDrivers/CMSIS/Include",
+      "-Ifw-lib-stm32-CocktailOS/kernel",
+      "-Ifw-lib-stm32-CocktailOS/kernel/core",
+      "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
+      "-Og",
+      "-Wall",
+      "-fdata-sections",
+      "-ffunction-sections",
+      "-g",
+      "-gdwarf-2",
+      "-Wa,-a,-ad,-alms=build/cocktail_core.lst",
+      "-o",
+      "build/cocktail_core.o",
+      "fw-lib-stm32-CocktailOS/kernel/cocktail_core.c"
+    ],
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/fw-lib-stm32-CocktailOS/kernel/cocktail_core.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/cocktail_core.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/arm-none-eabi-gcc",
+      "-c",
+      "-mcpu=cortex-m7",
+      "-mthumb",
+      "-mfpu=fpv5-sp-d16",
+      "-mfloat-abi=hard",
+      "-DUSE_HAL_DRIVER",
+      "-DSTM32F746xx",
+      "-ICore/Inc",
+      "-IDrivers/STM32F7xx_HAL_Driver/Inc",
+      "-IDrivers/STM32F7xx_HAL_Driver/Inc/Legacy",
+      "-IDrivers/CMSIS/Device/ST/STM32F7xx/Include",
+      "-IDrivers/CMSIS/Include",
+      "-Ifw-lib-stm32-CocktailOS/kernel",
+      "-Ifw-lib-stm32-CocktailOS/kernel/core",
+      "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
+      "-Og",
+      "-Wall",
+      "-fdata-sections",
+      "-ffunction-sections",
+      "-g",
+      "-gdwarf-2",
+      "-Wa,-a,-ad,-alms=build/switch.lst",
+      "-o",
+      "build/switch.o",
+      "fw-lib-stm32-BuildKit/Switch/switch.c"
+    ],
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/fw-lib-stm32-BuildKit/Switch/switch.c",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/switch.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/arm-none-eabi-gcc",
+      "-x",
+      "assembler-with-cpp",
+      "-c",
+      "-mcpu=cortex-m7",
+      "-mthumb",
+      "-mfpu=fpv5-sp-d16",
+      "-mfloat-abi=hard",
+      "-DUSE_HAL_DRIVER",
+      "-DSTM32F746xx",
+      "-ICore/Inc",
+      "-IDrivers/STM32F7xx_HAL_Driver/Inc",
+      "-IDrivers/STM32F7xx_HAL_Driver/Inc/Legacy",
+      "-IDrivers/CMSIS/Device/ST/STM32F7xx/Include",
+      "-IDrivers/CMSIS/Include",
+      "-Ifw-lib-stm32-CocktailOS/kernel",
+      "-Ifw-lib-stm32-CocktailOS/kernel/core",
+      "-Ifw-lib-stm32-CocktailOS/kernel/peripheral",
+      "-Ifw-lib-stm32-BuildKit/Switch",
+      "-Og",
+      "-Wall",
+      "-fdata-sections",
+      "-ffunction-sections",
+      "-g",
+      "-gdwarf-2",
+      "-o",
+      "build/startup_stm32f746xx.o",
+      "startup_stm32f746xx.s"
+    ],
+    "directory": "/home/aniai-sexy/Workspace/F746-testcodes",
+    "file": "/home/aniai-sexy/Workspace/F746-testcodes/startup_stm32f746xx.s",
+    "output": "/home/aniai-sexy/Workspace/F746-testcodes/build/startup_stm32f746xx.o"
   }
 ]

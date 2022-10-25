@@ -131,9 +131,10 @@ C_INCLUDES =  \
 export C_INCLUDES C_SOURCES
 
 MODULE_LIST = \
-fw-lib-stm32-CocktailOS
+fw-lib-stm32-CocktailOS \
+fw-lib-stm32-BuildKit 
 
-include $(addprefix $(MODULE_LIST), /Makefile)
+include $(addsuffix /Makefile, $(MODULE_LIST))
 
 # compile gcc flags
 ASFLAGS = $(MCU) $(AS_DEFS) $(AS_INCLUDES) $(OPT) -Wall -fdata-sections -ffunction-sections
