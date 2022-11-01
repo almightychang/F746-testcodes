@@ -290,6 +290,20 @@ main(void)
     Switch_TypeDef *sw  = Switch_Init(sw1);
     sw->falling_event   = process1;
 
+    TRACE(LOG_WARNING, "%p %p", process1->task_queue.stqh_first,
+          process1->task_queue.stqh_first->pcb_entries.stqe_next);
+
+    uint32_t  aa   = 8;
+    uint32_t *cnt8 = &aa;
+    uint32_t *inc  = 0;
+
+    do {
+        __LDREXW((uint32_t *)&inc);
+    }
+    while(__STREXW((uint32_t)cnt8, (uint32_t *)&inc));
+    TRACE(LOG_CRITICAL, "MAIN: %p %d %d", &aa, *cnt8, *inc);
+
+    //    while(1) {}
     /* USER CODE END 2 */
 
     /* Infinite loop */
