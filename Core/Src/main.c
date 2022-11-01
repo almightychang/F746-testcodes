@@ -123,7 +123,7 @@ TASK_FN(task_block1)
     // sprintf(buf, "blocking-1 %d\n", cnt);
     // HAL_UART_Transmit(&huart3, buf, strlen(buf), 10);
     //  // monitor_all();
-    TRACE(LOG_INFO, "task 1");
+    TRACE(LOG_CRITICAL, "task 1");
     Cocktail_PcbTypeDef *p = (Cocktail_PcbTypeDef *)0x20000c48;
     /*TRACE(LOG_ERROR,
                 "\n\tcaller: %p\n\twait: %p\n\tsched next: %p\n\ttask: %p",
@@ -290,28 +290,14 @@ main(void)
     Switch_TypeDef *sw  = Switch_Init(sw1);
     sw->falling_event   = process1;
 
-    TRACE(LOG_WARNING, "%p %p", process1->task_queue.stqh_first,
-          process1->task_queue.stqh_first->pcb_entries.stqe_next);
-
-    uint32_t  aa   = 8;
-    uint32_t *cnt8 = &aa;
-    uint32_t *inc  = 0;
-
-    do {
-        __LDREXW((uint32_t *)&inc);
-    }
-    while(__STREXW((uint32_t)cnt8, (uint32_t *)&inc));
-    TRACE(LOG_CRITICAL, "MAIN: %p %d %d", &aa, *cnt8, *inc);
-
-    //    while(1) {}
     /* USER CODE END 2 */
 
     /* Infinite loop */
     /* USER CODE BEGIN WHILE */
     while(1)
     {
-        EXECUTE(sched[ID_POLLING]);
-        // HAL_Delay(100);
+        // EXECUTE(sched[ID_POLLING]);
+        Cocktail_Run();
         /* USER CODE END WHILE */
 
         /* USER CODE BEGIN 3 */
