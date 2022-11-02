@@ -3,4 +3,7 @@
 	url = https://github.com/almightychang/fw-lib-stm32-CocktailOS
 [submodule "fw-lib-stm32-BuildKit"]
 	path = fw-lib-stm32-BuildKit
-	url = https://github.com/aniai-dev/fw-lib-stm32-BuildKit
+	url = https://github.com/almightychang/fw-lib-stm32-BuildKit
+[submodule "fw-lib-stm32-TemperatureSensor"]
+	path = fw-lib-stm32-TemperatureSensor
+	url = https://github.com/almightychang/fw-lib-stm32-TemperatureSensor
