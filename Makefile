@@ -132,7 +132,8 @@ export C_INCLUDES C_SOURCES
 
 MODULE_LIST = \
 fw-lib-stm32-CocktailOS \
-fw-lib-stm32-BuildKit/Switch
+fw-lib-stm32-BuildKit/robust-switch \
+fw-lib-stm32-BuildKit/temp-sensor
 
 include $(addsuffix /Makefile, $(MODULE_LIST))
 
