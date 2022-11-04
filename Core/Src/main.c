@@ -18,7 +18,9 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "tim.h"
+#include "adc.h"
+#include "dma.h"
+#include "i2c.h"
 #include "usart.h"
 #include "usb_otg.h"
 #include "gpio.h"
@@ -26,173 +28,18 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "cocktail.h"
-#include "switch.h"
-#include "usart.h"
-#include <stdatomic.h>
+#include "adc_builtin.h"
+#include "temp_sensor.h"
+#include "adc_resistive_sensor.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN PTD */
-extern struct Cocktail_SleepQueueDef sleep_queue;
-extern Cocktail_PcbTypeDef          *ptimer;
+
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-void
-monitor_ptimer()
-{
-    char buf[100];
-    sprintf(buf, "\tptimer(%p)\n", ptimer);
-    HAL_UART_Transmit(&huart3, (uint8_t *)buf, strlen(buf), 10);
-}
-
-void
-monitor_exti()
-{
-    // char buf[100];
-    //     sprintf(buf, "\texti: %p\n",
-    //             sched[COCKTAIL_TIM_PERIOD_ELAPSED_ID(TIM1)]->pcb_queue.stqh_first);
-    //     HAL_UART_Transmit(&huart3, buf, strlen(buf), 10);
-}
-
-void
-monitor_sleep()
-{
-    char buf[100];
-    sprintf(buf, "\tsleep: ");
-    HAL_UART_Transmit(&huart3, (uint8_t *)buf, strlen(buf), 10);
-    Cocktail_SleepTypeDef *s;
-    STAILQ_FOREACH(s, &sleep_queue, entries)
-    {
-        sprintf(buf, "%p ", s->key->caller->publisher);
-        HAL_UART_Transmit(&huart3, (uint8_t *)buf, strlen(buf), 10);
-    }
-    sprintf(buf, "\n");
-    HAL_UART_Transmit(&huart3, (uint8_t *)buf, strlen(buf), 10);
-}
-
-void
-monitor_sched(uint8_t id)
-{
-    char buf[100];
-    sprintf(buf, "\tsched(%d) ", id);
-    HAL_UART_Transmit(&huart3, (uint8_t *)buf, strlen(buf), 10);
-
-    // Cocktail_PcbTypeDef *p;
-    //  sprintf(buf, "f(%p) l(%p): ", STAILQ_FIRST(&sched[id]->pcb_queue),
-    //          STAILQ_LAST(&sched[id]->pcb_queue, __Cocktail_PcbTypeDef,
-    //                      sched_entries));
-    //  HAL_UART_Transmit(&huart3, buf, strlen(buf), 10);
-    //  STAILQ_FOREACH(p, &sched[id]->pcb_queue, sched_entries)
-    //  {
-    //     sprintf(buf, "%p ", p);
-    //      HAL_UART_Transmit(&huart3, buf, strlen(buf), 10);
-    //  }
-    //  sprintf(buf, "\n");
-    HAL_UART_Transmit(&huart3, (uint8_t *)buf, strlen(buf), 10);
-}
-
-void
-monitor_all()
-{
-
-    monitor_ptimer();
-    monitor_exti();
-    monitor_sleep();
-
-    monitor_sched(0);
-    monitor_sched(1);
-    monitor_sched(2);
-}
-
-Cocktail_PcbTypeDef *
-get_subprocess(TASK_Fn task_fn)
-{
-    Cocktail_PcbTypeDef *sub_process;
-    INIT_PROCESS(sub_process);
-    PUT_TASK(sub_process, NEW_TASK(COCKTAIL_POLLING_ID, task_fn, NULL));
-    return sub_process;
-}
-extern struct Cocktail_SleepQueueDef sleep_queue;
-TASK_FN(task_block1)
-{
-    static uint32_t cnt = 0;
-    TRACE(LOG_CRITICAL, "task 1");
-    if(++cnt > UINT32_MAX) return;
-    SLEEP(50);
-    SET_NEXT_TASK(NEW_TASK(COCKTAIL_POLLING_ID, task_block1, NULL));
-}
-TASK_FN(task_block2)
-{
-    static uint32_t cnt = 0;
-    char            buf[100];
-    sprintf(buf, "blocking-2 %lu\n", cnt);
-    HAL_UART_Transmit(&huart3, (uint8_t *)buf, strlen(buf), 10);
-
-    if(++cnt > 10) return;
-    SET_NEXT_TASK(NEW_TASK(COCKTAIL_POLLING_ID, task_block2, NULL));
-}
-TASK_FN(task_block3)
-{
-    static uint32_t cnt = 0;
-    char            buf[100];
-    sprintf(buf, "blocking-3 %lu\n", cnt);
-    HAL_UART_Transmit(&huart3, (uint8_t *)buf, strlen(buf), 10);
-
-    if(++cnt > 10) return;
-    SET_NEXT_TASK(NEW_TASK(COCKTAIL_POLLING_ID, task_block3, NULL));
-}
-TASK_FN(task2);
-TASK_FN(task3);
-TASK_FN(task4)
-{
-    char buf[100];
-    sprintf(buf, "task4!\n");
-    HAL_UART_Transmit(&huart3, (uint8_t *)buf, strlen(buf), 10);
-    //    SET_NEXT_TASK(task, NEW_TASK(COCKTAIL_EXTI_ID(GPIO_PIN_13), task2,
-    //    NULL));
-}
-
-TASK_FN(task1)
-{
-    char buf[100];
-    sprintf(buf, "task1!\n");
-    HAL_UART_Transmit(&huart3, (uint8_t *)buf, strlen(buf), 10);
-}
-
-TASK_FN(task2)
-{
-    char     buf[100];
-    uint32_t t = HAL_GetTick();
-    sprintf(buf, "[%lu] task2!\n", t);
-    HAL_UART_Transmit(&huart3, (uint8_t *)buf, strlen(buf), 10);
-
-    // WAIT_FOR(get_subprocess(task_block1));
-    WAIT_FOR(get_subprocess(task_block2));
-    WAIT_FOR(get_subprocess(task_block3));
-
-    SLEEP(7);
-    //        SET_NEXT_TASK(task,
-    //                      NEW_TASK(COCKTAIL_TIM_PERIOD_ELAPSED_ID(TIM1),
-    //                      task4, NULL));
-}
-
-TASK_FN(task3)
-{
-    uint32_t       t   = HAL_GetTick();
-    static uint8_t cnt = 0;
-    char           buf[100];
-    sprintf(buf, "[%lu] task3 - %d\n", t, cnt++);
-    HAL_UART_Transmit(&huart3, (uint8_t *)buf, strlen(buf), 10);
-
-    SLEEP(50);
-    if(cnt > 5) return;
-    SET_NEXT_TASK(NEW_TASK(COCKTAIL_POLLING_ID, task3, NULL));
-    // Cocktail_addTask(task->_pcb, Cocktail_newTask(task2, NULL));
-    // sprintf(buf, "put task2 to %p\n", task->_pcb);
-    // HAL_UART_Transmit(&huart3, buf, strlen(buf), 10);
-}
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -248,42 +95,45 @@ main(void)
 
     /* Initialize all configured peripherals */
     MX_GPIO_Init();
+    MX_DMA_Init();
+    MX_ADC1_Init();
     MX_USART3_UART_Init();
     MX_USB_OTG_FS_PCD_Init();
-    MX_TIM1_Init();
-    MX_UART4_Init();
-    MX_USART6_Init();
+    MX_I2C1_Init();
     /* USER CODE BEGIN 2 */
     Cocktail_Init();
 
-    Cocktail_PcbTypeDef *process1;
-    INIT_PROCESS(process1);
+    ADCBuiltIn_initChannel(&hadc1, 3);
+    uint16_t *c[3];
+    c[0] = ADCBuiltIn_getRankAddress(&hadc1, 0);
+    c[1] = ADCBuiltIn_getRankAddress(&hadc1, 1);
+    c[2] = ADCBuiltIn_getRankAddress(&hadc1, 2);
 
-    SCHEDULE(get_subprocess(task_block1));
+    TempProbe_InitTypeDef ts_Init;
+    ts_Init.interval   = 1000.0;
+    ts_Init.probe      = getNTCprobe(100000.0, 3950.0);
+    ts_Init.probe_type = NTC_PROBE;
 
-    PUT_TASK(process1, NEW_TASK(COCKTAIL_POLLING_ID, task1, NULL));
-    PUT_TASK(process1, NEW_TASK(COCKTAIL_POLLING_ID, task2, NULL));
-    PUT_TASK(process1, NEW_TASK(COCKTAIL_POLLING_ID, task3, NULL));
+    ADCResSensor_InitTypeDef ntc_Init;
+    ntc_Init.R_ref       = 10000.0;
+    ntc_Init.adc_max     = 4096.0;
+    ntc_Init.adc_raw     = (uint32_t *)ADCBuiltIn_getRankAddress(&hadc1, 1);
+    ntc_Init.conf        = RES_SENSOR_UPSTREAM;
+    ntc_Init.interval    = 200;
+    ntc_Init.update_rate = 0.2;
 
-    // SCHEDULE(process1);
-    HAL_TIM_Base_Start_IT(&htim1);
+    TempSensor_TypeDef *sensor = TempSensor_Init(ts_Init, ntc_Init);
 
-    Switch_InitTypeDef sw1;
-    sw1.GPIO_Port      = GPIOC;
-    sw1.GPIO_Pin       = GPIO_PIN_13;
-    sw1.mode           = SW_EXTI_MODE;
-    sw1.sched_id       = COCKTAIL_EXTI_ID(GPIO_PIN_13);
-
-    Switch_TypeDef *sw = Switch_Init(sw1);
-    sw->falling_event  = process1;
-
+    // uint16_t array[16];
+    // HAL_ADC_Start_DMA(&hadc1, (uint32_t *)array, 3);
     /* USER CODE END 2 */
 
     /* Infinite loop */
     /* USER CODE BEGIN WHILE */
     while(1)
     {
-        // EXECUTE(sched[COCKTAIL_POLLING_ID]);
+        TRACE(LOG_CRITICAL, "temp: %4d\tadc: %3d", (uint32_t)sensor->value,
+              (uint32_t)sensor->adc_res->adc_value);
         Cocktail_Run();
         /* USER CODE END WHILE */
 

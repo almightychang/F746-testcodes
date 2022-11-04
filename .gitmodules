@@ -7,3 +7,6 @@
 [submodule "fw-lib-stm32-TemperatureSensor"]
 	path = fw-lib-stm32-TemperatureSensor
 	url = https://github.com/almightychang/fw-lib-stm32-TemperatureSensor
+[submodule "fw-lib-stm32-MAX116xx-I2C"]
+	path = fw-lib-stm32-MAX116xx-I2C
+	url = https://github.com/aniai-dev/fw-lib-stm32-MAX116xx-I2C
