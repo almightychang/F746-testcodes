@@ -30,7 +30,6 @@
 #include "cocktail.h"
 #include "adc_builtin.h"
 #include "temp_sensor.h"
-#include "adc_resistive_sensor.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -105,22 +104,22 @@ main(void)
 
     ADCBuiltIn_initChannel(&hadc1, 3);
     uint16_t *c[3];
-    c[0] = ADCBuiltIn_getRankAddress(&hadc1, 0);
-    c[1] = ADCBuiltIn_getRankAddress(&hadc1, 1);
-    c[2] = ADCBuiltIn_getRankAddress(&hadc1, 2);
+    c[0]                           = ADCBuiltIn_getRankAddress(&hadc1, 0);
+    c[1]                           = ADCBuiltIn_getRankAddress(&hadc1, 1);
+    c[2]                           = ADCBuiltIn_getRankAddress(&hadc1, 2);
 
-    TempProbe_InitTypeDef ts_Init;
-    ts_Init.interval   = 1000.0;
-    ts_Init.probe      = getNTCprobe(100000.0, 3950.0);
-    ts_Init.probe_type = NTC_PROBE;
+    TempProbe_InitTypeDef ts_Init  = { .interval = 1000.0,
+                                       .probe    = getNTCprobe(100000.0, 3950.0),
+                                       .probe_type = NTC_PROBE };
 
-    ADCResSensor_InitTypeDef ntc_Init;
-    ntc_Init.R_ref       = 10000.0;
-    ntc_Init.adc_max     = 4096.0;
-    ntc_Init.adc_raw     = (uint32_t *)ADCBuiltIn_getRankAddress(&hadc1, 1);
-    ntc_Init.conf        = RES_SENSOR_UPSTREAM;
-    ntc_Init.interval    = 200;
-    ntc_Init.update_rate = 0.2;
+    ResSensor_InitTypeDef ntc_Init = {
+        .R_ref       = 10000.0,
+        .adc_max     = 4096.0,
+        .adc_raw     = (uint32_t *)ADCBuiltIn_getRankAddress(&hadc1, 1),
+        .conf        = RES_SENSOR_UPSTREAM,
+        .interval    = 200,
+        .update_rate = 0.2
+    };
 
     TempSensor_TypeDef *sensor = TempSensor_Init(ts_Init, ntc_Init);
 

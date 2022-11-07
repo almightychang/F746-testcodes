@@ -136,9 +136,11 @@ export C_INCLUDES C_SOURCES
 MODULE_LIST = \
 fw-lib-stm32-CocktailOS \
 fw-lib-stm32-BuildKit/robust-switch \
-fw-lib-stm32-BuildKit/adc-toolkit \
+fw-lib-stm32-BuildKit/adc-essential \
 fw-lib-stm32-BuildKit/temp-sensor \
-fw-lib-stm32-MAX116xx-I2C
+fw-lib-stm32-BuildKit/decoder \
+fw-lib-stm32-BuildKit/adc-toolkit/max116xx-i2c
+#fw-lib-stm32-MAX116xx-I2C
 
 include $(addsuffix /Makefile, $(MODULE_LIST))
 
