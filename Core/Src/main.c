@@ -131,8 +131,6 @@ main(void)
     /* USER CODE BEGIN WHILE */
     while(1)
     {
-        TRACE(LOG_CRITICAL, "temp: %4d\tadc: %3d", (uint32_t)sensor->value,
-              (uint32_t)sensor->adc_res->adc_value);
         Cocktail_Run();
         /* USER CODE END WHILE */
 
